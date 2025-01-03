@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: radial-gradient(circle at center, #35654d, #1b3120, #050c05);
+  margin: 0;
+  padding: 30px;
+  height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  color: aliceblue;
+  margin: 0;
+  padding: 20px;
+}
+
+.card-img {
+  width: 20vw;
+  height: auto;
+  max-width: 125px;
+
+  margin: 0 5px;
+}
+.card-img__gamer {
+  visibility: hidden;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  background-color: #c5c5c5;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+  /* Отображаем подсказку, используя атрибут data-tooltip */
+button::after {
+  content: attr(data-tooltip);
+
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #464545;
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+button:hover::after {
+  opacity: 1;
+}

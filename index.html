@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Jack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body>
+  <h2>Дилер: <span id="dealer-sum">0</span></h2>
+  <div id="dealer-cards">
+    <img id="hidden" class="card-img" src="./images/back.png" />
+  </div>
+  <h2>Игрок: <span id="gamer-sum">0</span></h2>
+  <div id="gamer-cards">
+  </div>
+  <h2 id="results"></h2>
+  <div class="buttons">
+    <button id="hit" data-tooltip="Взять">
+        <img src="./images/hit.png" alt="Icon">
+    </button>
+    <button id="stay" data-tooltip="Остановиться">
+        <img src="./images/stay.png" alt="Icon">
+    </button>
+    <button id="restart" style="display: none;" data-tooltip="Заново">
+        <img src="./images/restart.png" alt="Icon">
+    </button>
+</div>
+</body>
+</html>
